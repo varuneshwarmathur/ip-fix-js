@@ -6,15 +6,22 @@
   <span id="ipaddress"></span>
   <span id="ipaddress2"></span>
   <span id="ipaddress3"></span>
+  <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>  
 <script>
 var ip = window.location.origin;
 var ip2 = window.location.hostname;
   var ip3 = window.location.hostname;
-  document.getElementById("ipaddress").innerHTML = 'Origin ! : '  + ip + " | verify in http://www.whatismypublicip.com/";
-   document.getElementById("ipaddress2").innerHTML = 'Hostname ! : '  + ip2 + " | verify in http://www.whatismypublicip.com/";
-  document.getElementById("ipaddress3").innerHTML = 'Host ! : '  + ip3 + " | verify in http://www.whatismypublicip.com/";
+  document.getElementById("ipaddress").innerHTML = 'Origin ! : '  + ip ;
+   document.getElementById("ipaddress2").innerHTML = 'Hostname ! : '  + ip2 ;
+  document.getElementById("ipaddress3").innerHTML = 'Host ! : '  + ip3 ;
   
+  
+function getIP(json) {  
+    document.write("My public IP address is: ", json.ip);  
+ }    
 </script>
+  
+
 </body>
 
 </html>
