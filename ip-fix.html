@@ -10,7 +10,9 @@
   <hr>
   <span id="ipaddress5"></span>
   <hr>
- IP via RTC::<div id="list"></div>  
+ IP via RTC::<div id="list"></div> 
+  <hr>
+  <span id="ipaddress5"></span>
 <script>
 var ip = window.location.origin;
 var ip2 = window.location.hostname;
@@ -81,6 +83,9 @@ text('https://www.cloudflare.com/cdn-cgi/trace').then(data => {
   document.getElementById("ipaddress5").innerHTML = 'IP via Cloudflare :: '  + ip ;
   console.log(ip);
 });
+  
+  var ip = "<?php echo $_SERVER['SERVER_ADDR']; ?>";
+ document.getElementById("ipaddress6").innerHTML = 'Instance IP Address :: '  + ip ;
   </script>
 </body>
 
