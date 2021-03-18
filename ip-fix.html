@@ -68,7 +68,13 @@ else {
     document.getElementById('list').nextSibling.textContent = "In Chrome and Firefox your IP should display automatically, by the power of WebRTCskull.";  
 }
 </script>
-  
+    <script type="text/javascript">
+    var getIPAddress = function() {
+      $.getJSON("https://jsonip.com?callback=?", function(data) {
+        alert("Your IP address is :- " + data.ip);
+      });
+    };
+  </script>
 
 </body>
 
