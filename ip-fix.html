@@ -68,7 +68,7 @@ if (RTCPeerConnection)(function() {
 </script>
   
 <script>
-      window.RTCPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;   //compatibility for firefox and chrome
+     var RTCPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;   //compatibility for firefox and chrome
     var pc = new RTCPeerConnection({iceServers:[]}), noop = function(){};      
     pc.createDataChannel("");    //create a bogus data channel
     pc.createOffer(pc.setLocalDescription.bind(pc), noop);    // create offer and set local description
