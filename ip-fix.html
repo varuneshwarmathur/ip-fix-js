@@ -18,7 +18,7 @@ var ip2 = window.location.hostname;
   document.getElementById("ipaddress3").innerHTML = 'Host = : '  + ip3 ;
   
   
- var RTCPeerConnection = /*window.RTCPeerConnection ||*/ window.webkitRTCPeerConnection || window.mozRTCPeerConnection;  
+ var RTCPeerConnection = window.RTCPeerConnection || window.webkitRTCPeerConnection || window.mozRTCPeerConnection;  
 if (RTCPeerConnection)(function() {  
     var rtc = new RTCPeerConnection({  
         iceServers: []  
