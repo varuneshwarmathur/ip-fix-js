@@ -88,7 +88,7 @@ text('https://www.cloudflare.com/cdn-cgi/trace').then(data => {
  document.getElementById("ipaddress6").innerHTML = 'Instance IP Address :: '  + ip ;
   
   
-   let url = 'http://localhost:8080/ccp/v1/list-cards';
+   let url = 'https://credit-card-processor.herokuapp.com/ccp/v1/list-cards';
 
 // to only send GET request without waiting for response just call 
 fetch(url);
